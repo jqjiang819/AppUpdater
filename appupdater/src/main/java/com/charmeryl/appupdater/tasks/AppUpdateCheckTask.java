@@ -16,7 +16,7 @@ import com.charmeryl.appupdater.managers.UpdateManager;
  */
 
 public class AppUpdateCheckTask extends AsyncTask<Integer,Integer,Boolean> {
-    public static class TriggerMethod {
+    private static class TriggerMethod {
         public static final int AUTOMATIC = 0;
         public static final int MANUALLY = 1;
     }
