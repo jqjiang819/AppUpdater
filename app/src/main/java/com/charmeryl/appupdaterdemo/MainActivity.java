@@ -1,7 +1,5 @@
 package com.charmeryl.appupdaterdemo;
 
-import android.content.pm.PackageManager;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 new AppUpdater(MainActivity.this)
-                        .setTriggerMethod(AppUpdater.MANUALLY)
+                        .setTriggerMethod(AppUpdater.TriggerMethod.MANUALLY)
                         .setUpdateUrl("https://gist.githubusercontent.com/CharmeRyl/efa87949bd3724221b02ea4d01919ba9/raw/51557b836999e298d445e695438e42f1cfe3b0e5/updater.json")
                         .start();
             }
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 new AppUpdater(MainActivity.this)
-                        .setTriggerMethod(AppUpdater.MANUALLY)
+                        .setTriggerMethod(AppUpdater.TriggerMethod.MANUALLY)
                         .setUpdateUrl("https://raw.githubusercontent.com/charmeryl/AppUpdater/master/app/update-latest.json")
                         .start();
             }
