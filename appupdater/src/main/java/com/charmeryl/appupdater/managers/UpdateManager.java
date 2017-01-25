@@ -68,6 +68,10 @@ public class UpdateManager {
         this.UrlType = SCRIPT_JSON;
     }
 
+    public void setGithub(String user, String repo, String branch) {
+
+    }
+
     public void setHideVer(String version){
         this.hideVer = version;
         SharedPreferences.Editor editor = context.getSharedPreferences("updater",0).edit();
@@ -81,7 +85,9 @@ public class UpdateManager {
     }
 
     public void setDownloadDir(String downloadDir){
-        this.DownloadDir = downloadDir;
+        if (downloadDir != null && !downloadDir.isEmpty()) {
+            this.DownloadDir = downloadDir;
+        }
     }
 
     public String getHideVer(){
